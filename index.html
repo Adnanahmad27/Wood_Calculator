@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wood_Cal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/vfs_fonts.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+<body>
+    <div class="create-section">
+        <button class="main-btn" onclick="toggleModel()">Click To Add</button>
+        <div class="model hide-model" id="model">
+            <span class="material-icons close-icon" id="close-icon" onclick="toggleModel()">close</span>
+            <div class="model-body">
+                <h2>Enter Details</h2>
+                <form id="form">
+                    <div>
+                        <label for="length">Length : </label>
+                        <input type="text" placeholder="Enter the Length" id="length" name="length" required />
+                    </div>
+                    <div>
+                        <label for="circum">Circumference : </label>
+                        <input type="text" placeholder="Enter the Circumference" id="circum" name="circum" required />
+                    </div>
+                    <button id="add-btn" class="btn">+Add</button>
+                    <button type="button" class="btn close-btn" onclick="toggleModel()">Close</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <table class="list" id="list">
+        <thead>
+            <tr >
+                <th>S.No</th>
+                <th>Length</th>
+                <th>Width</th>
+                <th>Height</th>
+                <th>Options</th>
+            </tr>
+        </thead>
+        <tbody>
+        
+    </tbody> 
+    </table>
+    <br>
+    <button class="main-btn pdf-btn" onclick="generatePDF(event)"><span class="material-icons">download</span>Download PDF</button>
+    <script src="script.js"></script>
+</body>
+</html>
+
+</body>
+</html>
